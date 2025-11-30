@@ -29,6 +29,18 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Initialize demo user if no users exist
+    const usersData = localStorage.getItem('users');
+    if (!usersData) {
+      const demoUser = {
+        id: '1',
+        name: 'Demo User',
+        email: 'demo@example.com',
+        password: 'demo123'
+      };
+      localStorage.setItem('users', JSON.stringify([demoUser]));
+    }
+
     const savedUser = localStorage.getItem('user');
     if (savedUser) {
       setUser(JSON.parse(savedUser));

@@ -46,20 +46,29 @@ const Navbar: React.FC = () => {
                 </li>
                 <li className="nav-item">
                   <Link 
+                    className={`nav-link ${location.pathname === '/assessment' ? 'active' : ''}`} 
+                    to="/assessment"
+                  >
+                    Assessment
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link 
+                    className={`nav-link ${location.pathname === '/results' ? 'active' : ''}`} 
+                    to="/results"
+                  >
+                    Results
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link 
                     className={`nav-link ${location.pathname === '/chat' ? 'active' : ''}`} 
                     to="/chat"
                   >
                     Chat
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link 
-                    className={`nav-link ${location.pathname === '/premium' ? 'active' : ''}`} 
-                    to="/premium"
-                  >
-                    Premium
-                  </Link>
-                </li>
+
                 <li className="nav-item dropdown">
                   <a 
                     className="nav-link dropdown-toggle" 
@@ -73,6 +82,11 @@ const Navbar: React.FC = () => {
                     <li>
                       <Link className="dropdown-item" to="/profile">
                         <i className="fas fa-user me-2"></i>Profile
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/admin">
+                        <i className="fas fa-cog me-2"></i>Admin Panel
                       </Link>
                     </li>
                     <li><hr className="dropdown-divider" /></li>

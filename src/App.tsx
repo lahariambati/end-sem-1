@@ -9,9 +9,12 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
+import Assessment from './pages/Assessment';
+import Results from './pages/Results';
 import Chat from './pages/Chat';
 import Premium from './pages/Premium';
 import Profile from './pages/Profile';
+import AdminPanel from './pages/AdminPanel';
 
 function App() {
   return (
@@ -24,9 +27,12 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/assessment" element={<Assessment />} />
+            <Route path="/results" element={<Results />} />
             <Route path="/chat" element={<Chat />} />
             <Route path="/premium" element={<Premium />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/admin" element={<AdminPanel />} />
           </Routes>
         </div>
       </Router>

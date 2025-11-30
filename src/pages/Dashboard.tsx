@@ -135,28 +135,40 @@ const Dashboard: React.FC = () => {
             <div className="card-body">
               <div className="row">
                 <div className="col-md-6 mb-3">
-                  <Link to="/chat" className="btn btn-outline-primary w-100">
+                  <Link to="/assessment" className="btn btn-outline-primary w-100">
+                    <i className="fas fa-clipboard-list me-2"></i>
+                    Take Assessment
+                  </Link>
+                </div>
+                <div className="col-md-6 mb-3">
+                  <Link to="/results" className="btn btn-outline-success w-100">
+                    <i className="fas fa-chart-bar me-2"></i>
+                    View Results
+                  </Link>
+                </div>
+                <div className="col-md-6 mb-3">
+                  <Link to="/chat" className="btn btn-outline-info w-100">
                     <i className="fas fa-comments me-2"></i>
                     Open Chat
                   </Link>
                 </div>
                 <div className="col-md-6 mb-3">
-                  <Link to="/premium" className="btn btn-outline-success w-100">
+                  <Link to="/premium" className="btn btn-outline-warning w-100">
                     <i className="fas fa-crown me-2"></i>
                     Upgrade to Premium
                   </Link>
                 </div>
                 <div className="col-md-6 mb-3">
-                  <Link to="/profile" className="btn btn-outline-info w-100">
+                  <Link to="/profile" className="btn btn-outline-secondary w-100">
                     <i className="fas fa-user me-2"></i>
                     Edit Profile
                   </Link>
                 </div>
                 <div className="col-md-6 mb-3">
-                  <button className="btn btn-outline-warning w-100">
-                    <i className="fas fa-download me-2"></i>
-                    Export Data
-                  </button>
+                  <Link to="/admin" className="btn btn-outline-dark w-100">
+                    <i className="fas fa-cog me-2"></i>
+                    Admin Panel
+                  </Link>
                 </div>
               </div>
             </div>
